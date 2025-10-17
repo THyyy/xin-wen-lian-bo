@@ -15,6 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const getDate = () => {
 	const add0 = num => num < 10 ? ('0' + num) : num;
 	const date = new Date();
+	date.setDate(date.getDate() - 1); // 获取前一天
 	return '' + date.getFullYear() + add0(date.getMonth() + 1) + add0(date.getDate());
 }
 // 当前日期
